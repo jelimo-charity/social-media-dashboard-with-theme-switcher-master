@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="title">
+        <h2>Social Media Dashboard</h2>
+        <p class="allFollowers">Total Followers: <span id="total-followers">233,445</span></p>
+      </div>
+      <div class="mode">
+        <input type="checkbox" id="darkmode-toggle">
+        <label for="darkmode-toggle"></label>
+      </div>
+    </div>
+    <div class="mainBox">
+      <div class="upperCards">
+        <div class="card" id="card-one">
+          <span id="user">
+            <p id="logo"></p>
+            <p id="userName"></p>
+            <p id="Followers"></p>
+            <p>Followers</p>
+          </span>
+        </div>
+        <div class="card" id="card-two">
+          <span id="following">
+            <p id="logo"></p>
+            <p id="userg"></p>
+            <p id="Following"></p>
+            <p>Following</p>
+          </span>
+        </div>
+        <div class="card" id="card-three">
+          <span id="following">
+            <p id="location"></p>
+            <p id="company-name"></p>
+            <p id="blog"></p>
+            <!-- <p>Following</p> -->
+          </span>
+        </div>
+        <div class="card" id="card-four">
+          <span id="">
+            <p id="gists"></p>
+            <p id="public-repos"></p>
+            <p id="createdat"></p>
+            <!-- <p>Following</p> -->
+          </span>
+        </div>
+      </div>
+      <div class="lowerCards">
+        <h3>Overview - Today</h3>
+        <div class="card" id="overview-card">Page Views</div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
