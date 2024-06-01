@@ -1,72 +1,54 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.container{
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 20px;
 }
-.navbar{
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
     height: 150px;
     background-color: hsl(225, 100%, 98%);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.title{
+
+.title {
     margin-left: 20px;
 }
-.mainBox{
-    /* border: 1px solid blue; */
-    position: relative;
-    top: -30px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
-}
-.upperCards{
-    display: flex;
-    flex-direction: row;
-    
-}
-.lowerCards{
-    display: flex;
-    flex-direction: column;
 
+.title h2 {
+    font-size: 24px;
+    color: hsl(230, 17%, 14%);
 }
-.lowerCards h3{
-    margin: 10px;
+
+.title p {
+    font-size: 18px;
+    color: hsl(230, 17%, 34%);
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    height: 100px;
-    width: 150px;
-    border-radius: 5px;
-    background-color: hsl(225, 100%, 98%);
-}
-#card-one{
-    border-top: 2px solid  hsl(230, 72%, 42%);
-}
-#card-two{
-    border-top: 2px solid  hsl(55, 72%, 42%);
-}
-#card-three{
-    border-top: 2px solid  hsl(324, 72%, 42%);
-}
-#card-four{
-    border-top: 2px solid  hsl(202, 72%, 42%);
-}
+
 .mode input {
     display: none;
-  }
+}
+
 .mode label {
     cursor: pointer;
     background-color: #ccc;
@@ -75,7 +57,9 @@
     height: 30px;
     position: relative;
     width: 60px;
-  }
+    margin-right: 20px;
+}
+
 .mode label::after {
     background-color: white;
     border-radius: 50%;
@@ -86,15 +70,148 @@
     top: 2px;
     transition: 0.3s;
     width: 26px;
-  }
+}
+
 .mode input:checked + label::after {
     transform: translateX(30px);
-  }
+}
+
+.mainBox {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.upperCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lowerCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.lowerCards h3 {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 22px;
+    color: hsl(230, 17%, 24%);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    height: 150px;
+    width: 280px;
+    border-radius: 10px;
+    background-color: hsl(225, 100%, 98%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: hsl(230, 17%, 34%);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: hsl(230, 17%, 24%);
+}
+
+#card-one {
+    border-top: 4px solid hsl(230, 72%, 42%);
+}
+
+#card-two {
+    border-top: 4px solid hsl(55, 72%, 42%);
+}
+
+#card-three {
+    border-top: 4px solid hsl(324, 72%, 42%);
+}
+
+#card-four {
+    border-top: 4px solid hsl(202, 72%, 42%);
+}
+
+#overview-card-one {
+    border-top: 4px solid hsl(200, 72%, 42%);
+}
+
+#overview-card-two {
+    border-top: 4px solid hsl(190, 72%, 42%);
+}
+
+#overview-card-three {
+    border-top: 4px solid hsl(180, 72%, 42%);
+}
+
+#overview-card-four {
+    border-top: 4px solid hsl(170, 72%, 42%);
+}
+
+#overview-card-five {
+    border-top: 4px solid hsl(160, 72%, 42%);
+}
+
+#overview-card-six {
+    border-top: 4px solid hsl(150, 72%, 42%);
+}
+
+#overview-card-seven {
+    border-top: 4px solid hsl(140, 72%, 42%);
+}
+
+#overview-card-eight {
+    border-top: 4px solid hsl(130, 72%, 42%);
+}
+
 .dark-mode {
     background-color: #121212;
     color: white;
-  }
+}
+
+.dark-mode .navbar {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .navbar .title h2,
+.dark-mode .navbar .title p {
+    color: white;
+}
+
 .dark-mode .card {
     background-color: #1e1e1e;
-  }
-  
+    color: white;
+}
+
+.dark-mode .card-title {
+    color: white;
+}
+
+.dark-mode label {
+    background-color: #555;
+}
+
+.dark-mode label::after {
+    background-color: #333;
+}
